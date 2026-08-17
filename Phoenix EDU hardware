@@ -1,0 +1,592 @@
+1. Phoenix EDU hardware
+
+Core electronics
+
+* 1 Arduino Uno R3 or compatible
+* 1 USB cable for the Arduino
+* 1 breadboard
+* 5 SG90 micro servos
+* 5 push buttons
+* 1 RGB LED
+* 3 current-limiting resistors for the RGB LED
+* Male-to-male jumper wires
+* Male-to-female jumper wires
+* External regulated 5V servo power supply
+* Power connection lead
+* Common ground connection
+
+Do not list as supported
+
+* Arduino Uno R1
+* Arduino Uno R2
+* ESP8266 boards
+* D1 or D2 boards
+* MG996R servos
+* DS3218 servos
+
+2. Phoenix Lite hardware
+
+Core electronics
+
+* 1 ESP32 DevKit V1 or ESP-WROOM-32 development board
+* Elegoo ESP32 V4 38-pin board as a tested option
+* 1 suitable USB data cable
+* 1 PCA9685 16-channel servo driver
+* 5 MG90S metal-gear micro servos
+* 5 push buttons
+* 1 RGB LED
+* 3 RGB LED resistors
+* Jumper wires
+* Servo extension leads where required
+* Wire for permanent connections
+* Optional stripboard or small prototype board
+
+Locked servo channels
+
+* Channel 0: Thumb
+* Channel 1: Index
+* Channel 2: Middle
+* Channel 3: Ring
+* Channel 4: Pinky
+
+Locked I²C connections
+
+* SDA: GPIO 21
+* SCL: GPIO 22
+* PCA9685 address: 0x40
+
+Power equipment
+
+* Separate regulated servo supply
+* 5.4V to 6.2V servo rail
+* 6.00V nominal servo voltage
+* Common ground between the ESP32, PCA9685 and servo supply
+* Power switch
+* Optional emergency kill switch
+* Inline fuse or resettable fuse
+* Battery connector
+* Power distribution wiring
+
+3. Phoenix Full hardware
+
+Everything in Phoenix Lite, plus:
+
+* 1 Upside Down Labs Patchy EMG sensor
+* Patchy EMG electrode cable
+* Disposable EMG electrode pads
+* Separate regulated 5V Patchy supply where required
+* 1 GC9A01 1.28-inch round TFT display
+* 1 0–25V voltage sensor module
+* 1 vibration motor for haptic feedback
+* 1 vibration motor driver transistor or MOSFET
+* 1 flyback diode where required
+* 1 resistor for the vibration motor driver
+* Optional microSD card module
+* MicroSD card
+* Optional master kill switch
+* Optional servo power relay or MOSFET
+* Wi-Fi access through the ESP32
+* Phone, tablet or laptop for the WebUI
+* USB power source for the ESP32
+* External supply for the servo rail
+
+Locked Full connections
+
+* EMG signal: GPIO 34
+* Voltage sensor: GPIO 35
+* I²C SDA: GPIO 21
+* I²C SCL: GPIO 22
+* PCA9685 address: 0x40
+
+Mission 6 demonstration controls
+
+* White button: GPIO 12
+* Black button: GPIO 13
+* Red button: GPIO 14
+* Blue button: GPIO 27
+* Green button: GPIO 26
+* RGB red: GPIO 25
+* RGB green: GPIO 33
+* RGB blue: GPIO 32
+
+4. Button controls
+
+Five-button D-pad
+
+* 1 blue centre button
+* 1 green wrist-side button
+* 1 red elbow-side button
+* 1 white upper button
+* 1 black lower button
+
+Standard Phoenix functions
+
+* Green: Close
+* Red: Open
+* Blue: Power or lock
+* White: Next grip
+* Black: Previous grip
+
+5. Servo and power options discussed
+
+Approved baseline
+
+* SG90 servos for EDU learning builds
+* MG90S servos for Phoenix Lite
+* MG90S servos for Phoenix Full
+
+Alternative servo considered
+
+* EMAX ES08MA II 12g metal-gear servo
+
+Not supported due to size and weight
+
+* MG996R
+* DS3218
+* Five large standard-size servos
+
+Battery and power options discussed
+
+* 7.2V 3300mAh Ni-MH battery with KET-2P connector
+* Two 7.2V Ni-MH batteries for rotation and charging
+* 7.4V 1000mAh battery packs
+* 12.6V 5800mAh lithium-ion battery
+* 12V six-cell 18650 battery box
+* Regulated mains power supply for bench testing
+* Suitable Ni-MH battery charger
+* Battery voltage tester
+* Multimeter
+
+Voltage regulators discussed
+
+* Zerodis 8A UBEC
+* 6A UBEC
+* 8A UBEC
+* MFE 6V 10A regulator
+* Micro BEC rated for 6V to 60V input
+* APM or Pixhawk 5.3V power module
+* MP1584EN 3A buck converter
+* XL4015 buck converter
+* XL4016 9A buck converter
+* XL4016 300W regulator module
+
+Preferred portable baseline discussed
+
+* 7.2V 3300mAh Ni-MH battery
+* Zerodis 8A UBEC
+* 6.00V servo output
+* Separate USB supply for the ESP32
+* Shared common ground
+
+6. 3D-printed mechanical parts
+
+Arm assemblies
+
+* Palm
+* Back-of-hand cover
+* Thumb assembly
+* Index finger
+* Middle finger
+* Ring finger
+* Pinky finger
+* Wrist housing
+* Forearm shell
+* Bicep shell
+* Elbow joint
+* Servo mounting frame
+* Electronics tray
+* Battery compartment
+* Control-button housing
+* Display housing
+* EMG cable routing parts
+* Cable covers
+* Raised display pedestal for demonstrations
+
+Each finger
+
+* Finger base
+* Finger middle section
+* Fingertip
+* Flexion tendon channel
+* Return tendon or elastic channel
+* Fingertip tendon anchor
+
+7. Mechanical hardware and fasteners
+
+* M2 screws
+* M2 nuts
+* M2 washers
+* M2.5 screws
+* M2.5 nuts
+* M3 screws
+* M3 nuts
+* M3 washers
+* M3 locking nuts
+* Two main bolts for the forearm-to-bicep connection
+* Two wrist attachment bolts
+* Servo mounting screws
+* Small self-tapping screws
+* Threaded inserts where used
+* Heat-set threaded inserts
+* Metal hinge pins or suitable rod
+* Small bearings where required
+* Spacers
+* Standoffs
+* Cable ties
+* Reusable hook-and-loop straps
+* Velcro straps
+* Adhesive cable clips
+* Rubber feet for display units
+
+Exact bolt lengths still need to match the final STL files.
+
+8. Tendon system
+
+* Clear monofilament fishing line
+* Braided fishing line as a stronger option
+* Nylon cord
+* Strong cable for heavy-duty adaptations
+* Flat clothing elastic for finger return
+* Elastic cord
+* Crimp sleeves
+* Small cable ferrules
+* Tendon anchor beads or knots
+* Heat-shrink tubing for tendon ends
+* Tweezers or needle-nose pliers for routing
+* Long needle or threading tool
+
+Return systems discussed
+
+* Flat clothing elastic on the dorsal side
+* Dual-tendon string system
+* String-based opening tendon
+* Elastic return remains the simpler baseline
+
+9. 3D-printing supplies
+
+* PLA filament
+* Sunlu PLA
+* White PLA for the medical-finish version
+* Red PLA
+* Blue PLA
+* Gunmetal grey PLA
+* Black PLA for small functional parts
+* PETG for parts needing extra temperature or impact resistance
+* Flexible filament where padding or grip inserts need it
+* Spare printer nozzles
+* 0.4mm nozzle
+* Build-plate adhesive
+* Isopropyl alcohol for plate cleaning
+* Deburring tool
+* Flush cutters
+* Scraper
+* Sandpaper
+* Needle files
+* Craft knife
+* Digital calipers
+* Heat gun
+* Soldering iron for heat-set inserts
+* Filament storage bags
+* Desiccant packs
+
+Locked print approach discussed
+
+* Six walls
+* White medical finish
+* Stronger structural print settings for load-bearing parts
+
+10. Electronics assembly supplies
+
+* Soldering iron
+* Solder
+* Flux
+* Solder wick
+* Heat-shrink tubing
+* Heat gun
+* Wire strippers
+* Side cutters
+* Crimping tool
+* Dupont crimp pins
+* Dupont connector housings
+* JST connectors
+* KET-2P connectors
+* Servo connectors
+* Silicone-insulated wire
+* Red power wire
+* Black ground wire
+* Signal wire
+* Breadboards
+* Stripboard
+* Terminal blocks
+* Lever connectors
+* Electrical tape
+* Kapton tape
+* Cable labels
+* Cable sleeves
+* Hot-glue gun
+* Hot-glue sticks
+* Multimeter
+* Bench power supply
+* USB power meter
+* Servo tester
+
+11. Cardboard hand mission supplies
+
+Per student or group
+
+* Printed cardboard hand template
+* White cardstock or corrugated cardboard
+* Five straw sections
+* Five tendon strings
+* Sticky tape
+* Glue
+* Scissors
+* Pencil
+* Ruler
+* Colouring pencils
+* Crayons
+* Washable markers
+* Hole punch
+* Finger-joint fold guide
+* Tendon threading guide
+
+Classroom stock
+
+* Spare printed hand templates
+* Pre-cut hand templates for younger children
+* Drinking straws
+* String
+* Masking tape
+* Clear tape
+* Glue sticks
+* Child-safe scissors
+* Disposable table covers or platters
+* Storage bags
+* Labels
+* Teacher demonstration hand
+* Large human-arm cutout
+* Large Phoenix hand cutout
+
+12. School electronics mission kit
+
+Mission 2, one-servo build
+
+* 1 ESP32 board
+* 1 PCA9685 servo driver
+* 1 MG90S servo
+* Jumper wires
+* USB data cable
+* Regulated power supply
+* XL4015 regulator set to 5.00V
+* Breadboard if needed
+* Small screwdriver
+* Multimeter
+* Printed wiring diagram
+* Student checklist
+* Teacher test sheet
+
+Mission 3, five-servo build
+
+* 5 MG90S servos
+* 3 main control buttons
+* Red button
+* Green button
+* Blue button
+* Servo mounting structure
+* Five-finger printed hand
+* Fishing-line tendons
+* Elastic return material
+* Regulated servo supply
+
+Mission 4, controls and safety
+
+* White button
+* Black button
+* RGB LED
+* RGB resistors
+* Power switch
+* Optional kill switch
+* Voltage-monitoring equipment
+* Printed test checklist
+
+Mission 5 and Mission 6
+
+* Patchy EMG
+* Electrode pads
+* GC9A01 display
+* Voltage sensor
+* Complete five-servo arm
+* Computer with Arduino IDE
+* USB cable
+* WebUI device
+* Calibration worksheet
+* Validation checklist
+
+13. Computer and software requirements
+
+* Windows, macOS or Linux computer
+* Arduino IDE
+* ESP32 board package
+* Adafruit PWM Servo Driver Library
+* Wire library
+* Preferences library
+* TFT_eSPI library for the display
+* Suitable USB serial driver
+* Modern web browser
+* Wi-Fi-capable phone, tablet or laptop
+* CSV-compatible spreadsheet software
+* Git
+* GitHub account
+* PDF reader
+* STL slicing software
+* Cura, PrusaSlicer or OrcaSlicer
+
+14. Expo demonstration equipment
+
+Main display
+
+* One Phoenix Full hero arm
+* One raised centre pedestal
+* Two static arms beside the hero arm
+* One complete horizontal arm in front
+* White arm
+* Red arm
+* Blue arm
+* Gunmetal grey arm
+* Tablet running the WebUI
+* Laptop for sign-ups
+* Phone or tablet for supervised grip control
+* 3D printer
+* PLA filament
+* Spare completed fingers
+* Brochure stand
+* Printed brochures
+* QR-code signs
+* Tablecloth
+* Backdrop
+* Logo signage
+* Power extension leads
+* Surge-protected power strip
+* USB chargers
+* Spare batteries
+* Battery charger
+* Cable covers
+* Gaffer tape
+* Cable ties
+* Cleaning cloths
+* Small repair toolkit
+* Spare servos
+* Spare PCA9685
+* Spare ESP32
+* Spare wires and connectors
+
+Interactive bottle demonstration
+
+* Five-finger printed hand
+* One strong servo
+* Motion or proximity sensor
+* Empty plastic bottle
+* Delayed close-and-open control program
+* Guarded mounting stand
+* Emergency power switch
+* Stable base
+* Servo power supply
+
+15. Workshop and activity supplies
+
+Whiteboard design workshops
+
+* 12 small whiteboards
+* 12 whiteboard markers
+* 12 whiteboard erasers
+* Cleaning spray or wipes
+* Sample prosthetic-arm designs
+* Sample robot designs
+* Barbie-themed design example
+* Iron Man-themed design example
+* Hall of Inventors photo sign
+* Photo permission information
+
+Colouring activity
+
+* EvoArm Phoenix colouring sheets
+* Crayons
+* Colouring pencils
+* Washable markers
+* Disposable platters or table protectors
+* Pencil sharpeners
+* Storage containers
+
+3D pen demonstration
+
+* 3D pen
+* Low-temperature PLA filament
+* Spare filament colours
+* Whiteboard or tracing surface
+* Printed tracing templates
+* Heat-resistant mat
+* Power adaptor
+* Supervised demonstration area
+
+16. General workshop tools
+
+* Phillips screwdrivers
+* Flat-head screwdrivers
+* Precision screwdriver set
+* Hex-key set
+* Small spanners
+* Needle-nose pliers
+* Combination pliers
+* Side cutters
+* Flush cutters
+* Tweezers
+* Clamps
+* Helping-hands holder
+* Cutting mat
+* Craft knife
+* Scissors
+* Metal ruler
+* Tape measure
+* Digital calipers
+* Permanent marker
+* Paint marker
+* Label printer
+* Small compartment storage boxes
+* First-aid kit
+* Safety glasses
+
+17. Optional recipient fitting supplies
+
+* Soft foam padding
+* EVA foam
+* Medical-grade padding where sourced
+* Neoprene
+* Velcro straps
+* Elastic straps
+* Webbing
+* Buckles
+* Ratchet straps
+* Hard-hat-style adjustment ratchet
+* Velcro glove wrap
+* Heavy-duty snap clip
+* Stronger cable
+* Replaceable grip material
+* Rubber grip pads
+* Golf attachment hardware
+* Bottle or phone grip insert
+
+18. Items requiring final measurement before GitHub publication
+
+* Exact M2, M2.5 and M3 screw lengths
+* Elbow bolt diameter and length
+* Wrist bolt diameter and length
+* Tendon length per finger
+* Elastic length per finger
+* Wire lengths
+* Battery connector standard
+* Fuse rating
+* Power-switch current rating
+* Exact battery compartment dimensions
+* Servo horn type
+* Printed-part quantities for left and right arms
+
